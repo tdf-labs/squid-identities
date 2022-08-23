@@ -1,0 +1,10 @@
+{
+  "outDir": "./src/types/khala",
+  "specVersions": "https://khala.archive.subsquid.io/graphql",
+  "typesBundle": "khala",
+  "calls": [
+    "Identity.set_identity",
+    "Identity.clear_identity",
+    "Identity.kill_identity"
+  ]
+}

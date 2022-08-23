@@ -1,0 +1,10 @@
+{
+  "outDir": "./src/types/polkadot",
+  "specVersions": "https://polkadot.archive.subsquid.io/graphql",
+  "typesBundle": "polkadot",
+  "calls": [
+    "Identity.set_identity",
+    "Identity.clear_identity",
+    "Identity.kill_identity"
+  ]
+}
