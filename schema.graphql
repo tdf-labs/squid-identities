@@ -2,6 +2,7 @@ enum SubstrateNetwork {
   kusama
   polkadot
   phala
+  khala
 }
 
 enum SubstrateIdentityAction {

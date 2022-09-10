@@ -15,6 +15,7 @@ if (!supportedNetworks.includes(network)) {
 
 new SubstrateProcessor(new TypeormDatabase())
   .setBatchSize(500)
+  .setTypesBundle(network)
   .setDataSource({
     archive: lookupArchive(network as KnownArchives, { release: 'FireSquid' }),
   })
