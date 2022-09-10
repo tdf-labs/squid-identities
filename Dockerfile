@@ -7,6 +7,9 @@ FROM node-with-gyp AS builder
 WORKDIR /squid
 ADD package.json .
 ADD package-lock.json .
+ADD schema.graphql .
+ADD Makefile .
+ADD typegen typegen
 RUN npm ci
 ADD tsconfig.json .
 ADD src src
@@ -16,7 +19,7 @@ FROM node-with-gyp AS deps
 WORKDIR /squid
 ADD package.json .
 ADD package-lock.json .
-RUN npm ci --production
+RUN npm ci --production --ignore-scripts
 
 FROM node AS squid
 WORKDIR /squid
@@ -25,6 +28,7 @@ COPY --from=deps /squid/package-lock.json .
 COPY --from=deps /squid/node_modules node_modules
 COPY --from=builder /squid/lib lib
 ADD db db
+ADD typegen typegen
 ADD assets assets
 ADD schema.graphql .
 # TODO: use shorter PROMETHEUS_PORT
