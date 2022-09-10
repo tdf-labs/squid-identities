@@ -1,5 +1,5 @@
 {
-  "outDir": "./src/types/kusama",
+  "outDir": "../src/types/kusama",
   "specVersions": "https://kusama.archive.subsquid.io/graphql",
   "typesBundle": "kusama",
   "calls": [

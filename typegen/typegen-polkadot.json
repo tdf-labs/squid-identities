@@ -1,5 +1,5 @@
 {
-  "outDir": "./src/types/polkadot",
+  "outDir": "../src/types/polkadot",
   "specVersions": "https://polkadot.archive.subsquid.io/graphql",
   "typesBundle": "polkadot",
   "calls": [

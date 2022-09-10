@@ -1,5 +1,5 @@
 {
-  "outDir": "./src/types/khala",
+  "outDir": "../src/types/khala",
   "specVersions": "https://khala.archive.subsquid.io/graphql",
   "typesBundle": "khala",
   "calls": [
