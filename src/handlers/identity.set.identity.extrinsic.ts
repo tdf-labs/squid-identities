@@ -16,7 +16,10 @@ export default (network: SubstrateNetwork) =>
     const blockNumber = BigInt(ctx.block.height);
     const date = new Date(ctx.block.timestamp);
     const account = getCallOriginAccount(ctx.call.origin, network);
-    assert(account);
+    if (!account) {
+      console.debug(`Skipping event - no account found`);
+      return;
+    }
     const publicKey = decodeAddress(account);
     const identity = getIdentitySetIdentityCall(ctx);
 
